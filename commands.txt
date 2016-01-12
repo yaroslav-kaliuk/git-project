@@ -32,12 +32,12 @@ $ git commit -m"add files"  -  делаем коммит одного файла
 $git config --global core.editor "'D:\Program Files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 C:\Program Files (x86)\Notepad++
 
+
 // Логин изменений
 $ git log - посмотреть все коммиты, чтобы выйти с длинного списка логов нужно нажать q 
 $ git help log  -  список всех возможных commit для git
 $ git help commit  -  список всех возможных  команд для commit
 $ git log --pretty=format:"%h - %an, %ar : %s"  -  вывод всех коммиов по форматам
-
 подробное инфо: http://simple-training.com/git-vcs/git-logs/
 
 
@@ -47,10 +47,10 @@ shift + insert  -  вставка команды
 
 
 // Мержим
+$ git merge название верки, например new_f  -  лучше мержить сначала мастер ветку в дочернюю, проверить все, дальше с дочерней смаржить в мастер вертку
 $ git config --global merge.tool kdiff3  -  утилита для слияния веток
-
-// GitHub
-$ git push -u origin master  -  добавить изменения в нужную вертку, если ветка одна можно написать $ git push
+Скачать утилиту http://sourceforge.net/projects/kdiff3/files/
+$ git config --global mergetool.kdiff3cmd '"D:\\Git\\KDiff3\\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'  -  Подключить утилиту 
 
 
 // Создание веток
@@ -60,3 +60,7 @@ $ git checkout master - переключится на мастер ветку
 $ git checkout -b new_f  -  создать новую ветку и сразу в нее перейти. checkout (создаем ветку), -b (сразу в нее переходим), new_f (название новой ветки)
 $ git branch  -  показать все верки (активная верка отмечена звездочкой)
 $ git branch -v  -  посмотреть последние коммиты в вертках
+
+
+// GitHub
+$ git push -u origin название верки, например master  -  добавить изменения в нужную вертку
