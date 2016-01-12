@@ -33,7 +33,7 @@ $git config --global core.editor "'D:\Program Files\Notepad++\notepad++.exe' -mu
 C:\Program Files (x86)\Notepad++
 
 
-// Логин изменений
+// Логи
 $ git log - посмотреть все коммиты, чтобы выйти с длинного списка логов нужно нажать q 
 $ git help log  -  список всех возможных commit для git
 $ git help commit  -  список всех возможных  команд для commit
