@@ -1,0 +1,41 @@
+// База
+$ git init  -  создать репозиторий (в нужной папке нажать правую клавишу мыши и выбрать Git Bash Here)
+$ git config --global user.name "yaroslav.kaliuk"  -  добавление имени пользователя, для отслеживания истории изменений (кто что закоммитил)
+$ git config --global user.email yaroslav.kaliuk@gmail.com  -  добавление email
+$ git config --list  -  просмотр всех базовых настроек
+
+
+// Статусы
+$ git status  -  Выполнив данную команду мы увидим так называемые untracked files - файлы которые не под контролем Git. Файлы и папки которые у нас в игноре эта команда не покажет.
+$ git status --untracked-files-all  -  С помощью этого дополнительного ключа гит нам покажет ВСЕ файлы включая те которые находятся в папках.
+
+
+// Добавление файлов
+$ git -a -m"init"  -  сохранить текущее состояние проекта. -a  -  все измененные файлы поместить в индекс и сразу делаем commit; -m  -  комментарий для коммита
+$ git add .  -  добавление файлов в индекс
+$ git add fileName.txt  -  добавление одного файла в индекс
+$ git add "*.php"  -  добавление файлов с каким-то расширением в индекс
+
+
+// Удаление/откатка файлов
+$ git rm --cached fileName.txt  -  добавление файла в список игнорируемых
+$ git checkout -- fileName.txt  -  убрать все последние изменения и откатить до последней сохраненной версии файла
+
+
+// Коммиты
+$ git commit -m"commit"  -  добавление файлов в коммит
+$ git commit  -  написать комментарий в коммит
+$ git commit -m"add files"  -  делаем коммит одного файла 
+
+
+// Свой редактор для комментариев
+$git config --global core.editor "'D:\Program Files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+C:\Program Files (x86)\Notepad++
+
+// Логин изменений
+$ git log - посмотреть все коммиты, чтобы выйти с длинного списка логов нужно нажать q 
+$ git help log  -  список всех возможных commit для git
+$ git help commit  -  список всех возможных  команд для commit
+$ git log --pretty=format:"%h - %an, %ar : %s"  -  вывод всех коммиов по форматам
+
+подробное инфо: http://simple-training.com/git-vcs/git-logs/
