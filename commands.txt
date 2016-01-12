@@ -23,7 +23,7 @@ $ git checkout -- fileName.txt  -  убрать все последние изменения и откатить до 
 
 
 // Коммиты
-$ git commit -m"commit"  -  добавление файлов в коммит
+$ git commit -m"commit"  -  добавление файлов в коммит 
 $ git commit  -  написать комментарий в коммит
 $ git commit -m"add files"  -  делаем коммит одного файла 
 
